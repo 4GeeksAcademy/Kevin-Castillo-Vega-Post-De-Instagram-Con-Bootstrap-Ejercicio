@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Instagram Feed</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+  <div class="container mt-3">
+
+    <!-- TOP NAVBAR -->
+    <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded">
+
+      <!-- INSTAGRAM LOGO -->
+      <h5 class="m-0">
+        <i class="bi bi-instagram"></i>
+        Instagram
+      </h5>
+
+
+      <!-- RIGHT BUTTONS -->
+      <div class="d-flex align-items-center gap-2">
+
+        <!-- CREATE POST BUTTON -->
+        <button class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-target="#createPostModal">
+
+          Create a new post
+
+        </button>
+
+
+        <!-- SETTINGS DROPDOWN -->
+        <div class="dropdown">
+
+          <button class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown">
+
+            <i class="bi bi-gear-fill"></i>
+
+          </button>
+
+
+          <ul class="dropdown-menu dropdown-menu-end">
+
+            <li>
+              <a class="dropdown-item" href="#">
+                Profile
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                Accessibility
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                Privacy and Data
+              </a>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item text-danger" href="#">
+                Log Out
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- VIEW BUTTONS -->
+    <ul class="nav nav-pills justify-content-center mt-4 mb-4"
+      id="pills-tab"
+      role="tablist">
+
+      <!-- GRID BUTTON -->
+      <li class="nav-item">
+
+        <button class="nav-link active"
+          id="pills-home-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-home"
+          type="button">
+
+          <i class="bi bi-grid-3x3-gap-fill"></i>
+
+        </button>
+
+      </li>
+
+
+      <!-- LIST BUTTON -->
+      <li class="nav-item">
+
+        <button class="nav-link"
+          id="pills-profile-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-profile"
+          type="button">
+
+          <i class="bi bi-square-fill"></i>
+
+        </button>
+
+      </li>
+
+    </ul>
+
+
+
+    <!-- TAB CONTENT -->
+    <div class="tab-content">
+
+      <!-- GRID VIEW -->
+      <div class="tab-pane fade show active"
+        id="pills-home">
+
+        <div class="row g-2">
+
+          <div class="col-4">
+            <img src="https://picsum.photos/300?random=1"
+              class="img-fluid">
+          </div>
+
+          <div class="col-4">
+            <img src="https://picsum.photos/300?random=2"
+              class="img-fluid">
+          </div>
+
+          <div class="col-4">
+            <img src="https://picsum.photos/300?random=3"
+              class="img-fluid">
+          </div>
+
+          <div class="col-4">
+            <img src="https://picsum.photos/300?random=4"
+              class="img-fluid">
+          </div>
+
+          <div class="col-4">
+            <img src="https://picsum.photos/300?random=5"
+              class="img-fluid">
+          </div>
+
+          <div class="col-4">
+            <img src="https://picsum.photos/300?random=6"
+              class="img-fluid">
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- LIST VIEW -->
+      <div class="tab-pane fade"
+        id="pills-profile">
+
+        <!-- POST -->
+        <div class="card mb-4">
+
+          <div class="card-header d-flex justify-content-between">
+
+            <strong>My Random Post</strong>
+
+            <span>06/04</span>
+
+          </div>
+
+          <img src="https://picsum.photos/800/500?random=10"
+            class="card-img-top">
+
+          <div class="card-body">
+
+            <p class="card-text">
+              This image changes every refresh.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- POST -->
+        <div class="card mb-4">
+
+          <div class="card-header d-flex justify-content-between">
+
+            <strong>Another Post</strong>
+
+            <span>06/04</span>
+
+          </div>
+
+          <img src="https://picsum.photos/800/500?random=11"
+            class="card-img-top">
+
+          <div class="card-body">
+
+            <p class="card-text">
+              Bootstrap Instagram feed example.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- CREATE POST MODAL -->
+  <div class="modal fade"
+    id="createPostModal"
+    tabindex="-1">
+
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+
+        <!-- MODAL HEADER -->
+        <div class="modal-header">
+
+          <h5 class="modal-title">
+            Create a new post
+          </h5>
+
+          <button type="button"
+            class="btn-close"
+            data-bs-dismiss="modal">
+          </button>
+
+        </div>
+
+
+
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+
+          <label class="form-label">
+            Caption:
+          </label>
+
+          <textarea class="form-control mb-3"
+            rows="2"
+            placeholder="Add the caption of your post here"></textarea>
+
+
+          <!-- ICON BUTTONS -->
+          <div class="d-flex gap-2">
+
+            <button class="btn btn-light border">
+
+              <i class="bi bi-camera-fill"></i>
+
+            </button>
+
+
+            <button class="btn btn-light border">
+
+              <i class="bi bi-geo-alt-fill"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- MODAL FOOTER -->
+        <div class="modal-footer">
+
+          <button type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal">
+
+            Close
+
+          </button>
+
+
+          <button type="button"
+            class="btn btn-success">
+
+            Publish
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
